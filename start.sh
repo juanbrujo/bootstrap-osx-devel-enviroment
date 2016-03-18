@@ -98,7 +98,6 @@ apps=(
 	mplayerx
 	vlc
 	skype
-	mailbox
 	airmail-amt
 	twitter
 	transmit
@@ -114,6 +113,7 @@ apps=(
 	torbrowser
 	transmission
 	slack
+	sip
 )
 echo "installing apps..."
 brew cask install ${apps[@]}
