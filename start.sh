@@ -1,4 +1,4 @@
-#!/bin/sh
+  #!/bin/sh
 # Set the colours you can use
 black='\033[0;30m'
 white='\033[0;37m'
@@ -8,10 +8,10 @@ yellow='\033[0;33m'
 blue='\033[0;34m'
 magenta='\033[0;35m'
 cyan='\033[0;36m'
- 
+
 #  Reset text attributes to normal + without clearing screen.
 alias Reset="tput sgr0"
- 
+
 # Color-echo.
 # arg $1 = message
 # arg $2 = Color
@@ -34,7 +34,7 @@ select yn in "Yes" "No"; do
   esac
 done
 
-# Install brew if is not already Installed 
+# Install brew if is not already Installed
 if test ! $(which brew); then
   	echo "Installing homebrew..."
   	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -99,7 +99,6 @@ apps=(
 	vlc
 	skype
 	airmail-amt
-	twitter
 	transmit
 	vox
 	iresize
@@ -114,6 +113,7 @@ apps=(
 	transmission
 	slack
 	sip
+	telegram
 )
 echo "installing apps..."
 brew cask install ${apps[@]}
@@ -122,13 +122,13 @@ brew cask install ${apps[@]}
 devel_apps=(
 	iterm
 	atom
-	sublime-text2
+	sublime-text
 	macdown
 	firefox
 	google-chrome
 	opera
 	virtualbox
-	github
+	github-desktop
 )
 echo "installing devel apps..."
 brew cask install ${devel_apps[@]}
@@ -141,14 +141,14 @@ echo ""
 echo "Continue?"
 select yn in "Yes" "No"; do
   case $yn in
-    Yes ) echo "";;
+    Yes ) break;;
     No ) echo "byebye"; exit 1;;
   esac
 done
 
 # Ask for the administrator password upfront
 sudo -v
- 
+
 # Keep-alive: update existing `sudo` time stamp until script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
