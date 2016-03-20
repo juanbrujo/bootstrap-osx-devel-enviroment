@@ -23,8 +23,8 @@ cecho() {
 
 echo ""
 cecho "##############################################" $red
-cecho "#         Please don't run this blindly" $red
-cecho "#############################################" $red
+cecho "#         Please don't run this blindly       " $red
+cecho "##############################################" $red
 echo ""
 echo "Agree?"
 select yn in "Yes" "No"; do
