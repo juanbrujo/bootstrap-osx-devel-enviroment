@@ -60,7 +60,15 @@ A script to help you set up your development enviroment on OSX. It was custom ma
 - `Fast keyboard repeat rate` 
 
 **Misc:**
+
 - `Link Sublime Text command line`
+
+**Specific npm global modules for webdev:**
+
+- Gulp
+- GruntJS
+- Bower
+- npm-check-updates
 
 # Usage
 
@@ -72,11 +80,14 @@ Run it
 
 `./start.sh`
 
-that's it
+Then
+
+`./webdev.sh`
+
+_That's it!_
 
 # Credits
 The script is based in this two great examples:
 
-[Hacker's Guide to Setting up Your Mac](http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac)
-
-[OSX for Hackers: Yosemite/Mavericks Edition](https://gist.github.com/brandonb927/3195465)
+* [Hacker's Guide to Setting up Your Mac](http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac)
+* [OSX for Hackers: Yosemite/Mavericks Edition](https://gist.github.com/brandonb927/3195465)
