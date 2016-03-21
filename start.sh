@@ -133,6 +133,9 @@ devel_apps=(
 echo "installing devel apps..."
 brew cask install ${devel_apps[@]}
 
+echo "download mysql..."
+brew install mysql
+
 echo ""
 cecho "##############################################" $red
 cecho "#         STARTING SYSTEM CONFIG SCRIPT" $red
