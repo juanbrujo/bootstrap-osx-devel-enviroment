@@ -138,8 +138,8 @@ brew install mysql
 
 echo ""
 cecho "##############################################" $red
-cecho "#         STARTING SYSTEM CONFIG SCRIPT" $red
-cecho "#############################################" $red
+cecho "#         STARTING SYSTEM CONFIG SCRIPT 		#" $red
+cecho "##############################################" $red
 echo ""
 echo "Continue?"
 select yn in "Yes" "No"; do
@@ -181,6 +181,42 @@ select yn in "Yes" "No"; do
     No ) break;;
   esac
 done
+
+###############################################################################
+# Quicklook helpers
+# List of useful Quick Look plugins for developers
+# see: https://github.com/sindresorhus/quick-look-plugins
+###############################################################################
+
+echo ""
+cecho "##############################################" $red
+cecho "#         STARTING QUICKLOOK HELPERS 		#" $red
+cecho "##############################################" $red
+echo ""
+echo "Install s useful Quick Look plugins for developers"
+echo "Continue?"
+select yn in "Yes" "No"; do
+  case $yn in
+    Yes ) break;;
+    No ) echo "byebye"; exit 1;;
+  esac
+done
+
+# Cask I use for development
+devel_quicklook=(
+	qlcolorcode
+	qlstephen
+	qlmarkdown
+	quicklook-json
+	qlprettypatch
+	quicklook-csv
+	betterzipql
+	qlimagesize
+	webpquicklook
+	suspicious-package
+)
+echo "installing quicklook helpers..."
+brew cask install ${devel_quicklook[@]}
 
 echo ""
 cecho "Done!" $white
