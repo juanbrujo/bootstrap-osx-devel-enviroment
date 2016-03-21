@@ -1,4 +1,8 @@
-# What is this?
+# This project has now own a brand new repository: Meet [Talus](https://github.com/juanbrujo/Talus)!
+
+🕶🕶🕶🕶🕶
+
+## What is this?
 A script to help you set up your development enviroment on OSX. It was custom made for me, so before you run it, please read the code, comment or add what you need. You can use it as an example to write your own script that fits your needs.
 
 ## What it does?
